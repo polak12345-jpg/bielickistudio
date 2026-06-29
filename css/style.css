@@ -1251,32 +1251,66 @@ transform:scale(1.05);
 @media(max-width:800px){
 
     .navbar{
-        height:70px;
-        overflow:hidden;
+        height:80px;
+        overflow:visible;
     }
 
     .nav-container{
-        height:70px;
+        height:80px;
     }
 
     .logo{
-        height:70px;
+        height:80px;
         display:flex;
         align-items:center;
     }
 
     .logo img{
-        height:55px !important;
+        height:100px !important;
         width:auto;
         display:block;
     }
 
+
     .hamburger{
+        display:flex;
+        position:relative;
+        z-index:10000;
         margin-left:auto;
     }
 
+
     .menu{
-        top:70px;
+        position:fixed;
+        top:80px;
+        left:-100%;
+        width:100%;
+        height:calc(100vh - 80px);
+
+        background:rgba(11,11,11,.97);
+        backdrop-filter:blur(18px);
+
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:center;
+
+        padding-top:40px;
+        gap:30px;
+
+        transition:left .35s ease;
+
+        z-index:9999;
+    }
+
+    .menu.active{
+        left:0;
+    }
+
+
+    .menu a{
+        font-size:22px;
+        margin:0;
     }
 
 }
