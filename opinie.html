@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opinie | Studio BIELICKI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v23.0">
+    </script>
+
+    <!-- NAWIGACJA -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo"><img src="images/logo10.png" alt="Brak zdjęcia"></div>
+
+            <div class="menu">
+                <a href="index.html">Start</a>
+                <a href="about.html">O nas</a>
+                <a href="jakosc.html">Jakość</a>
+                <a href="realizacje.html">Realizacje</a>
+                <a href="opinie.html" class="active">Opinie</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAGŁÓWEK -->
+    <header class="page-title-section animate-fade">
+        <div class="container">
+            <h1 class="title">Opinie klientów</h1>
+        </div>
+    </header>
+
+<!-- OPINIE -->
+<section class="dark">
+    <div class="container">
+
+            <div class="card animate-fade delay-1"
+                style="max-width:850px; margin:auto; text-align:center;">
+
+                <h2 style="margin-bottom:15px;">
+                    Sprawdź opinie naszych klientów na Facebooku
+                </h2>
+
+                <p style="margin-bottom:35px;color:#bdbdbd;">
+                    Wszystkie opinie są publikowane bezpośrednio na naszym profilu Facebook.
+                </p>
+
+                <a href="https://www.facebook.com/bielickimeble/reviews" 
+                    target="_blank" 
+                    class="btn animate-fade 3s">
+                    Sprawdź opinie
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+
+            <div class="footer-logo">
+                <img src="images/logo9.png" alt="Studio BIELICKI">
+                <div><span>.
+            </div>
+
+            <p style="font-size: 13px; margin-top: 15px; color: #444;">
+                &copy; 2026 Studio BIELICKI - Wszelkie prawa zastrzeżone.
+            </p>
+
+        </div>
+    </footer>
+
+    <div id="topBtn">↑</div>
+
+    <script src="js/script.js"></script>
+        <script>
+    document.addEventListener("contextmenu", e => e.preventDefault()); document.addEventListener("keydown", function(e) { if (e.key === "F12") { e.preventDefault(); } if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) { e.preventDefault(); } if (e.ctrlKey && e.key === "U") { e.preventDefault(); } }); </script>
+
+</body>
+
+</html>

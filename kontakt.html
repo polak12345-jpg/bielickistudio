@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kontakt | Studio BIELICKI</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<style>
+
+/* NOWE / ZMODYFIKOWANE STYLE DLA TŁA SEKCJI */
+.gold {
+    background-image: linear-gradient(rgba(0, 8, 10, 0.85), rgba(0, 17, 20, 0.85)), url('images/kuchnia-b22g.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* daje elegancki efekt parallax podczas przewijania */
+    padding-bottom: 60px;
+}
+
+form input,
+form select,
+form textarea{
+    width:100%;
+    padding:12px;
+    margin-top:4px;
+    border-radius:10px;
+    border:1px solid #333;
+    background: rgba(10, 10, 10, 0.8);
+    color:#fff;
+}
+
+.contact-layout{
+    display:flex;
+    gap:35px;
+    align-items:flex-start;
+    margin-top:30px;
+}
+
+.contact-info{
+    width:35%;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.contact-form{
+    width:65%;
+}
+
+/* Nadanie kartom półprzezroczystego ciemnego tła, żeby ładnie wtapiały się w grafikę */
+.card{
+    width:100%;
+    padding:30px;
+    border-radius:16px;
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(8px); /* delikatne rozmycie tła za kartą */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+form input,
+form select,
+form textarea{
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    border-radius:10px;
+    border:1px solid #333;
+    background: rgba(10, 10, 10, 0.8);
+    color:#fff;
+}
+
+form textarea{
+    resize:vertical;
+}
+
+/* Kontener dla telefonu i wyboru regionu */
+.phone-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.phone-group select {
+    width: 35%;
+}
+
+.phone-group input[type="tel"] {
+    width: 65%;
+}
+
+.btn{
+    padding:15px;
+    font-size:16px;
+    border-radius:12px;
+}
+
+/* SOCIAL */
+.contact-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:0;
+    justify-content:center;
+}
+
+.contact-box{
+    width:55px;
+    height:55px;
+    border-radius:20px;
+    overflow:hidden;
+    background: rgba(20, 20, 20, 0.8);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:.4s ease;
+}
+
+/* Facebook */
+.contact-box.facebook:hover{
+    border-color:#1890f2;
+    box-shadow:0 0 22px rgba(24,119,242,.7);
+}
+
+/* YouTube */
+.contact-box.youtube:hover{
+    border-color:#FF0000;
+    box-shadow:0 0 22px rgba(255,0,0,.7);
+}
+
+/* LinkedIn */
+.contact-box.linkedin:hover{
+    border-color:#1410fd;
+    box-shadow:0 0 22px rgba(8, 11, 182, 0.7);
+}
+
+/* Instagram */
+.contact-box.instagram:hover{
+    border-color:#E1306C;
+    box-shadow:0 0 22px rgba(225,48,108,.7);
+}
+
+.contact-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0) invert(1);
+}
+
+/* formularz jak statystyki */
+.contact-form .card{
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+.contact-form .card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* responsywność */
+@media(max-width:1000px){
+    .contact-layout{
+        flex-direction:column;
+    }
+    .contact-info,
+    .contact-form{
+        width:100%;
+    }
+    .contact-buttons{
+        justify-content:flex-start;
+        flex-wrap:wrap;
+    }
+}
+
+@media(max-width:480px){
+    .phone-group {
+        flex-direction: column;
+        gap: 0;
+    }
+    .phone-group select,
+    .phone-group input[type="tel"] {
+        width: 100%;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="container nav-container">
+<div class="logo">
+    <img src="images/logo10.png" alt="Brak zdjęcia">
+</div>
+<div class="menu">
+<a href="index.html">Start</a>
+<a href="about.html">O nas</a>
+<a href="jakosc.html">Jakość</a>
+<a href="realizacje.html">Realizacje</a>
+<a href="opinie.html">Opinie</a>
+<a href="kontakt.html" class="active">Kontakt</a>
+</div>
+</div>
+</nav>
+
+<section class="gold animate-fade">
+<div class="container contact-container">
+
+<div class="page-title-section" style="padding-top:0px">
+<h1 class="title">Kontakt</h1>
+</div>
+
+<div class="contact-layout animate-fade delay-1">
+
+<div class="contact-info">
+
+<div class="card animate-fade">
+<h3>Biuro obsługi klienta</h3>
+<p>
+📞 601 670 867<br>
+📫 wojtekbielicki@o2.pl
+</p>
+</div>
+
+<div class="card animate-fade delay-1">
+<h3>Salon Sierakowice</h3>
+<p>
+📍 ul. Słupska 2, D.H. "Woźniak", I piętro<br>
+📞 601 670 867<br>
+📫 bielickimeble@o2.pl<br>
+⌚ Pon–Pt, 9:00–17:00 (zapytać!)
+</p>
+</div>
+
+<div class="card animate-fade delay-2">
+<h3>Salon Kartuzy</h3>
+<p>
+📍 ul. Jeziorna 6C/1, Kamieniczki nad jeziorem<br>
+📞 601 670 867<br>
+📫 bielickistudio@o2.pl<br>
+⌚ Pon–Pt, 9:00–13:00
+</p>
+</div>
+
+<div class="contact-buttons animate-fade delay-2">
+<a href="https://www.facebook.com/bielickimeble" class="contact-box facebook" target="_blank">
+<img src="images/facebook.png">
+</a>
+<a href="https://www.youtube.com/@StudioBIELICKI" class="contact-box youtube" target="_blank">
+<img src="images/yt.png">
+</a>
+<a href="https://www.linkedin.com/in/wojciechbielicki/" class="contact-box linkedin" target="_blank">
+<img src="images/in.png">
+</a>
+<a href="https://www.instagram.com/bielickikuchnie/" class="contact-box instagram" target="_blank">
+<img src="images/ig.png">
+</a>
+</div>
+
+</div>
+
+<div class="contact-form animate-fade delay-2">
+<div class="card">
+<h3>Formularz kontaktowy</h3>
+
+<form id="contact-form">
+
+<label>
+Imię i nazwisko
+</label>
+
+<input 
+type="text" 
+name="name"
+placeholder="Wpisz imię i nazwisko"
+required>
+
+
+<label>
+Adres e-mail
+</label>
+
+<input 
+type="email"
+name="email"
+placeholder="Wpisz adres e-mail"
+required>
+
+<label>
+Telefon
+</label>
+
+<div class="phone-group">
+    <select name="country" required>
+        <option value="+48" selected>Polska (+48)</option>
+        <option value="+49">Niemcy (+49)</option>
+        <option value="+44">Wielka Brytania (+44)</option>
+        <option value="+33">Francja (+33)</option>
+        <option value="+31">Holandia (+31)</option>
+        <option value="+32">Belgia (+32)</option>
+        <option value="+43">Austria (+43)</option>
+        <option value="+41">Szwajcaria (+41)</option>
+        <option value="+39">Włochy (+39)</option>
+        <option value="+34">Hiszpania (+34)</option>
+        <option value="+420">Czechy (+420)</option>
+        <option value="+421">Słowacja (+421)</option>
+        <option value="+380">Ukraina (+380)</option>
+        <option value="+370">Litwa (+370)</option>
+        <option value="+371">Łotwa (+371)</option>
+        <option value="+372">Estonia (+372)</option>
+        <option value="+45">Dania (+45)</option>
+        <option value="+46">Szwecja (+46)</option>
+        <option value="+47">Norwegia (+47)</option>
+        <option value="+353">Irlandia (+353)</option>
+        <option value="+1">USA / Kanada (+1)</option>
+    </select>
+    
+    <input 
+    type="tel"
+    name="phone"
+    placeholder="Numer telefonu"
+    required>
+</div>
+
+<label>
+Treść wiadomości
+</label>
+
+<textarea
+name="message"
+rows="7"
+placeholder="Wpisz wiadomość"
+required></textarea>
+
+<div style="margin-top:20px;">
+
+<label>
+Pytanie kontrolne: 
+<span id="captcha-question"></span>
+</label>
+
+<input 
+type="number"
+id="captcha-answer"
+placeholder="Wpisz wynik działania"
+required>
+
+</div>
+
+<div style="margin-top:20px">
+
+<div style="margin-top:20px; font-size: 13px; line-height: 1.5; color: #ccc;">
+<label><input type="checkbox" required style="width:auto; display:inline; margin-top:0; margin-right:8px;"> Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w związku z koniecznością udzielenia odpowiedzi na wysłane zapytanie. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Zostałem/am poinformowany/a, że przysługuje mi prawo dostępu do swoich danych, możliwości ich poprawiania, żądania zaprzestania ich przetwarzania. Administratorem danych osobowych jest Wojciech Bielicki Przedsiębiorstwo Handlowo - Usługowe "Bielicki", NIP: 5891597691, z siedzibą 83-340 Sierakowice, ul. Słupska 2.</label>
+<br><br>
+<label><input type="checkbox" required style="width:auto; display:inline; margin-top:0; margin-right:8px;"> Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w celu przesyłania informacji handlowej drogą elektroniczną zgodnie z ustawą o świadczeniu usług drogą elektroniczną na podany w tym celu adres email. Podanie danych osobowych jest dobrowolne. Zostałem/am poinformowany/a, że przysługuje mi prawo dostępu do swoich danych, możliwości ich poprawiania, żądania zaprzestania ich przetwarzania. Administratorem danych osobowych jest Wojciech Bielicki Przedsiębiorstwo Handlowo - Usługowe "Bielicki", NIP: 5891597691, z siedzibą 83-340 Sierakowice, ul. Słupska 2.</label>
+</div>
+
+<div style="text-align:center;">
+<button class="btn" type="submit">
+Wyślij wiadomość
+</button>
+</div>
+
+</form>
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-logo">
+            <img src="images/logo9.png" alt="Studio BIELICKI">
+            <div><span>.</span></div>
+        </div>
+        <p style="font-size: 13px; margin-top: 15px; color: #444;">
+            &copy; 2026 Studio BIELICKI - Wszelkie prawa zastrzeżone.
+        </p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault()); 
+document.addEventListener("keydown", function(e) { 
+    if (e.key === "F12") { e.preventDefault(); } 
+    if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) { e.preventDefault(); } 
+    if (e.ctrlKey && e.key === "U") { e.preventDefault(); } 
+}); 
+</script>
+<script>
+
+emailjs.init("uFpn0MGkzIFpd6-uz");
+
+
+// generowanie działania
+let num1 = Math.floor(Math.random() * 11);
+let num2 = Math.floor(Math.random() * 11);
+
+let correctAnswer = num1 + num2;
+
+
+document.getElementById("captcha-question").innerHTML =
+num1 + " + " + num2 + " = ?";
+
+
+
+document
+.getElementById("contact-form")
+.addEventListener("submit", function(e){
+
+
+e.preventDefault();
+
+
+let answer =
+document.getElementById("captcha-answer").value;
+
+
+
+if(parseInt(answer) !== correctAnswer){
+
+alert("Błędny wynik działania! Spróbuj ponownie.");
+
+
+// nowe działanie
+num1 = Math.floor(Math.random() * 11);
+num2 = Math.floor(Math.random() * 11);
+
+correctAnswer = num1 + num2;
+
+
+document.getElementById("captcha-question").innerHTML =
+num1 + " + " + num2 + " = ?";
+
+
+document.getElementById("captcha-answer").value = "";
+
+
+return;
+
+}
+
+
+
+emailjs.sendForm(
+"service_5dshk1l",
+"template_g7w90yn",
+this
+)
+
+.then(()=>{
+
+
+alert("Wiadomość została wysłana. Dziękujemy!");
+
+this.reset();
+
+
+// nowe działanie po wysłaniu
+num1 = Math.floor(Math.random() * 11);
+num2 = Math.floor(Math.random() * 11);
+
+correctAnswer = num1 + num2;
+
+document.getElementById("captcha-question").innerHTML =
+num1 + " + " + num2 + " = ?";
+
+
+})
+
+.catch((error)=>{
+
+
+alert("Błąd wysyłania wiadomości!");
+
+console.log(error);
+
+
+});
+
+
+});
+
+</script>
+
+</body>
+</html>

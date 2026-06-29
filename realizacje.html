@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Realizacje | Studio BIELICKI</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAWIGACJA -->
+
+<nav class="navbar">
+
+<div class="container nav-container">
+
+<div class="logo">
+    <img src="images/logo10.png" alt="Brak zdjęcia">
+</div>
+
+
+<div class="menu">
+
+<a href="index.html">Start</a>
+<a href="about.html">O nas</a>
+<a href="jakosc.html">Jakość</a>
+<a href="realizacje.html" class="active">Realizacje</a>
+<a href="opinie.html">Opinie</a>
+<a href="kontakt.html">Kontakt</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+
+<header class="page-title-section animate-fade">
+
+<div class="container">
+
+<h1 class="title">
+Nasze Realizacje
+</h1>
+
+</div>
+
+</header>
+
+
+
+
+
+<section class="dark realizacje-section">
+
+
+<div class="container">
+
+
+<div style="
+display:flex;
+gap:70px;
+align-items:flex-start;
+">
+
+
+
+<!-- GALERIA -->
+
+<div style="flex:1;">
+
+
+<div class="gallery animate-fade delay-1">
+
+
+<img src="images/kuchnia1.png" alt="">
+<img src="images/kuchnia2.png" alt="">
+<img src="images/zabudowa1.jpg" alt="">
+<img src="images/kuchnia3.png" alt="">
+<img src="images/kuchnia4.png" alt="">
+<img src="images/zabudowa2.jpg" alt="">
+<img src="images/kuchnia5.png" alt="">
+<img src="images/kuchnia6.png" alt="">
+<img src="images/kuchnia7.png" alt="">
+<img src="images/zabudowa3.jpg" alt="">
+<img src="images/kuchnia8.png" alt="">
+<img src="images/kuchnia9.png" alt="">
+<img src="images/kuchnia10.png" alt="">
+<img src="images/zabudowa4.jpg" alt="">
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- STARE KARTY PRZENIESIONE NA PRAWO -->
+
+<div id="styleCards"
+class="cards animate-fade"
+style="
+animation-delay:1s;
+width:360px;
+margin-left:20px;
+grid-template-columns:1fr;
+position:sticky;
+top:110px;
+">
+
+
+
+<div class="card">
+
+<h3>
+Nowoczesne kuchnie
+</h3>
+
+
+<p>
+
+Dominują tu proste, minimalistyczne formy,
+bezuchwytowe fronty oraz eleganckie
+matowe lub połyskujące wykończenia
+połączone z inteligentnym oświetleniem LED.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Klasyczne wnętrza
+</h3>
+
+
+<p>
+
+Ponadczasowy styl, w którym królują
+subtelne frezowania, naturalne materiały
+takie jak drewno czy kamień, oraz detale
+tworzące ciepły klimat domu.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+<section class="more-projects">
+
+<div class="container">
+
+
+<h2 class="title">
+Więcej realizacji
+</h2>
+
+
+
+<div class="more-grid">
+
+
+
+<div class="more-card">
+
+<img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200">
+
+
+<div class="more-overlay">
+
+<h3>
+Kuchnie
+</h3>
+
+<button onclick="openMoreGallery(0)">
+Zobacz
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="more-card">
+
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1200">
+
+
+<div class="more-overlay">
+
+<h3>
+Zabudowy
+</h3>
+
+
+<button onclick="openMoreGallery(1)">
+Zobacz
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="more-card">
+
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200">
+
+
+<div class="more-overlay">
+
+<h3>
+Szuflady i Szafki
+</h3>
+
+
+<button onclick="openMoreGallery(2)">
+Zobacz
+</button>
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</section>
+
+
+
+
+
+
+
+    <footer>
+        <div class="container">
+
+            <div class="footer-logo">
+                <img src="images/logo9.png" alt="Studio BIELICKI">
+                <div><span>.
+            </div>
+
+            <p style="font-size: 13px; margin-top: 15px; color: #444;">
+                &copy; 2026 Studio BIELICKI - Wszelkie prawa zastrzeżone.
+            </p>
+
+        </div>
+    </footer>
+
+
+
+
+
+<div id="topBtn">
+↑
+</div>
+
+
+<div id="lightbox" class="lightbox">
+
+    <div class="lightbox-content">
+
+        <span class="lightbox-close">&times;</span>
+
+        <span id="lightbox-counter">
+        1 / 1
+        </span>
+
+        <button class="lightbox-prev">‹</button>
+
+        <img id="lightbox-img" src="" alt="Powiększone zdjęcie">
+
+        <button class="lightbox-next">›</button>
+
+    </div>
+
+</div>
+
+
+<script src="js/script.js"></script>
+
+
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+
+document.addEventListener("keydown", function(e){
+
+if(e.key==="F12"){
+e.preventDefault();
+}
+
+if(
+e.ctrlKey &&
+e.shiftKey &&
+(
+e.key==="I" ||
+e.key==="J" ||
+e.key==="C"
+)
+){
+e.preventDefault();
+}
+
+if(e.ctrlKey && e.key==="U"){
+e.preventDefault();
+}
+
+});
+
+
+// ===== ELEMENTY =====
+
+const images = [...document.querySelectorAll(".gallery img")];
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImg = document.getElementById("lightbox-img");
+
+const closeBtn = document.querySelector(".lightbox-close");
+
+const prevBtn = document.querySelector(".lightbox-prev");
+
+const nextBtn = document.querySelector(".lightbox-next");
+
+const counter = document.getElementById("lightbox-counter");
+
+
+let current = 0;
+
+let activeGallery = images;
+
+let moreCurrent = 0;
+
+
+
+// ===== ANIMOWANA ZMIANA ZDJĘCIA =====
+
+function changeLightboxImage(src){
+
+    lightboxImg.src = src;
+
+}
+
+
+
+
+// ===== ZWYKŁA GALERIA =====
+
+
+function updateCounter(){
+
+    let index;
+
+    if(activeGallery === images){
+        index = current;
+    } else {
+        index = moreCurrent;
+    }
+
+    counter.innerHTML = `${index + 1} / ${activeGallery.length}`;
+
+}
+
+
+
+function showImage(){
+
+    changeLightboxImage(
+        activeGallery[current].src || activeGallery[current]
+    );
+
+    updateCounter();
+
+}
+
+
+
+images.forEach((img,index)=>{
+
+
+img.addEventListener("click",()=>{
+
+
+activeGallery = images;
+
+current = index;
+
+
+showImage();
+
+
+lightbox.classList.add("active");
+
+
+});
+
+
+});
+
+
+
+
+
+
+const moreGalleries = [
+
+[
+"images/kuchnia11.png",
+"images/kuchnia12.png",
+"images/kuchnia13.png",
+"images/kuchnia14.png",
+"images/kuchnia15.png",
+"images/kuchnia16.png",
+"images/kuchnia17.png",
+"images/kuchnia18.png",
+"images/kuchnia19.png",
+"images/kuchnia20.png",
+"images/kuchnia21.png",
+"images/kuchnia22.png",
+"images/kuchnia23.png",
+"images/kuchnia24.png",
+"images/kuchnia25.png",
+"images/kuchnia26.png",
+"images/kuchnia27.png",
+"images/kuchnia28.png",
+"images/kuchnia29.png",
+"images/kuchnia30.png",
+"images/kuchnia31.png",
+"images/kuchnia32.png",
+"images/kuchnia33.png",
+"images/kuchnia34.png",
+"images/kuchnia35.png",
+"images/kuchnia36.png",
+"images/kuchnia37.png",
+"images/kuchnia38.png",
+"images/kuchnia39.png",
+"images/kuchnia40.png",
+"images/kuchnia41.png",
+"images/kuchnia42.png",
+"images/kuchnia43.png",
+"images/kuchnia44.png",
+"images/kuchnia45.png",
+"images/kuchnia46.png"
+],
+
+
+[
+"images/zabudowa5.jpg",
+"images/zabudowa6.jpg",
+"images/zabudowa7.jpg",
+"images/zabudowa9.jpg",
+"images/zabudowa10.jpg",
+"images/zabudowa11.jpg"
+],
+
+
+[
+"images/szuflada1.jpg",
+"images/szuflada2.jpg",
+"images/szuflada3.jpg",
+"images/szuflada4.jpg",
+"images/szuflada5.jpg",
+"images/szuflada6.jpg",
+"images/szuflada7.jpg",
+"images/szuflada8.jpg",
+"images/szuflada9.jpg",
+"images/szuflada10.jpg",
+"images/szuflada11.jpg",
+"images/szuflada12.jpg",
+"images/szuflada13.jpg",
+"images/szuflada14.jpg",
+"images/szuflada15.jpg",
+"images/szuflada16.jpg",
+"images/szuflada17.jpg",
+"images/szuflada18.jpg",
+"images/szuflada19.jpg",
+"images/szuflada20.jpg",
+"images/szuflada21.jpg",
+"images/szuflada22.jpg",
+"images/szuflada23.jpg",
+"images/szuflada24.jpg",
+"images/szuflada25.jpg",
+"images/szuflada26.jpg",
+"images/szuflada27.jpg",
+"images/szuflada28.jpg",
+"images/szuflada29.jpg",
+"images/szuflada30.jpg",
+"images/szuflada31.jpg",
+"images/szuflada32.jpg",
+"images/szuflada33.jpg",
+"images/szuflada34.jpg"
+]
+
+];
+
+
+
+
+
+window.openMoreGallery = function(id){
+
+
+activeGallery = moreGalleries[id];
+
+
+moreCurrent = 0;
+
+
+changeLightboxImage(activeGallery[0]);
+
+updateCounter();
+
+
+lightbox.classList.add("active");
+
+
+};
+
+
+
+
+
+
+// ===== STRZAŁKI =====
+
+
+nextBtn.addEventListener("click",(e)=>{
+
+
+e.stopPropagation();
+
+
+if(!lightbox.classList.contains("active")) return;
+
+
+
+if(activeGallery === images){
+
+
+current++;
+
+
+if(current >= activeGallery.length){
+current = 0;
+}
+
+
+showImage();
+
+
+
+}else{
+
+
+moreCurrent++;
+
+
+if(moreCurrent >= activeGallery.length){
+moreCurrent = 0;
+}
+
+
+changeLightboxImage(
+    activeGallery[moreCurrent]
+);
+
+updateCounter();
+
+
+}
+
+
+
+});
+
+
+
+
+
+
+
+prevBtn.addEventListener("click",(e)=>{
+
+
+e.stopPropagation();
+
+
+if(!lightbox.classList.contains("active")) return;
+
+
+
+if(activeGallery === images){
+
+
+current--;
+
+
+if(current < 0){
+current = activeGallery.length-1;
+}
+
+
+showImage();
+
+
+
+}else{
+
+    moreCurrent--;
+
+    if(moreCurrent < 0){
+        moreCurrent = activeGallery.length - 1;
+    }
+
+    changeLightboxImage(
+        activeGallery[moreCurrent]
+    );
+
+    updateCounter();
+
+}
+
+
+});
+
+
+
+
+
+
+
+// ===== ZAMYKANIE =====
+
+
+closeBtn.addEventListener("click",()=>{
+
+lightbox.classList.remove("active");
+
+});
+
+
+
+lightbox.addEventListener("click",e=>{
+
+
+if(e.target === lightbox){
+
+lightbox.classList.remove("active");
+
+}
+
+
+});
+
+
+
+
+
+
+
+// ===== KLAWIATURA =====
+
+
+document.addEventListener("keydown",e=>{
+
+
+if(!lightbox.classList.contains("active")) return;
+
+
+
+if(e.key==="Escape"){
+
+lightbox.classList.remove("active");
+
+}
+
+
+
+if(e.key==="ArrowRight"){
+
+nextBtn.click();
+
+}
+
+
+
+if(e.key==="ArrowLeft"){
+
+prevBtn.click();
+
+}
+
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
