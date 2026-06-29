@@ -234,12 +234,8 @@ Korzystamy z najlepszego dostępnego programu na rynku.
 
 <div class="visual-buttons">
 
-<button onclick="changeVisual('live')">
+<button id="changeButton" onclick="changeVisual()">
 Pokaż na żywo
-</button>
-
-<button onclick="changeVisual('project')">
-Pokaż projekt
 </button>
 
 </div>
@@ -347,47 +343,55 @@ document.querySelectorAll(".menu a").forEach(link=>{
 </script>
 <script>
 
-function changeVisual(type){
+let liveView = false;
+
+
+function changeVisual(){
+
 
 const img = document.getElementById("visualImage");
 const text = document.getElementById("visualText");
-
-
-if(type === "live"){
-
-    img.style.opacity = "0";
-
-    setTimeout(()=>{
-
-        img.src="images/kuchnia8.png";
-        img.style.opacity="1";
-
-    },300);
-
-
-    text.innerHTML="Realizacja na żywo";
-
-
-}
+const button = document.getElementById("changeButton");
 
 
 
-if(type === "project"){
-
-    img.style.opacity="0";
+img.style.opacity="0";
 
 
-    setTimeout(()=>{
+setTimeout(()=>{
 
-        img.src="images/projekt4.png";
-        img.style.opacity="1";
 
-    },300);
+if(liveView){
 
+    img.src="images/projekt4.png";
 
     text.innerHTML="Podgląd projektu 3D";
 
+    button.innerHTML="Pokaż na żywo";
+
+    liveView=false;
+
+
+}else{
+
+
+    img.src="images/kuchnia8.png";
+
+    text.innerHTML="Realizacja na żywo";
+
+    button.innerHTML="Pokaż projekt";
+
+    liveView=true;
+
+
 }
+
+
+img.style.opacity="1";
+
+
+},300);
+
 
 
 }
