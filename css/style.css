@@ -333,53 +333,6 @@ color:#ddd;
 
 }
 
-
-
-@media(max-width:768px){
-
-
-.visual-box {
-
-height:420px;
-
-border-radius:25px;
-
-}
-
-.awards {
-    margin-top: 25px;
-}
-
-
-.awards p {
-    margin: 7px 0;
-    font-size: 17px;
-    line-height: 1.5;
-    color: #ddd;
-}
-
-.card.animate-fade {
-    opacity: 1;
-    animation: none;
-}
-
-
-.visual-overlay {
-
-padding:30px;
-
-}
-
-
-.visual-overlay h3 {
-
-font-size:28px;
-
-}
-
-
-}
-
 .card {
     background: var(--card-bg);
     padding: 40px 35px;
