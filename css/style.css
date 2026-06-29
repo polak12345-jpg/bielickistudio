@@ -187,6 +187,10 @@ section {
     position: relative;
 }
 
+.normal-text {
+    font-weight: 400;
+}
+
 /* Subtelna kreska pod tytułami dla lepszego designu */
 .title::after {
     content: '';
