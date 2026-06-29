@@ -1174,13 +1174,13 @@ transform:scale(1.05);
     max-width: 100% !important;
 }
 
-/* Telefon - poprawka menu */
+/* TELEFON */
 @media (max-width: 768px) {
 
     .nav-container {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 10px;
     }
 
     .menu {
@@ -1192,6 +1192,8 @@ transform:scale(1.05);
         padding: 10px 15px;
         white-space: nowrap;
         scrollbar-width: none;
+        position: relative;
+        z-index: 10;
     }
 
     .menu::-webkit-scrollbar {
@@ -1203,4 +1205,12 @@ transform:scale(1.05);
         font-size: 14px;
     }
 
+    .navbar {
+        position: relative;
+        z-index: 20;
+    }
+
+    .hero {
+        margin-top: 0;
+    }
 }
