@@ -1246,3 +1246,37 @@ transform:scale(1.05);
     }
 
 }
+
+/* POPRAWKA MOBILE NAVBAR */
+@media(max-width:800px){
+
+    .navbar{
+        height:70px;
+        overflow:hidden;
+    }
+
+    .nav-container{
+        height:70px;
+    }
+
+    .logo{
+        height:70px;
+        display:flex;
+        align-items:center;
+    }
+
+    .logo img{
+        height:55px !important;
+        width:auto;
+        display:block;
+    }
+
+    .hamburger{
+        margin-left:auto;
+    }
+
+    .menu{
+        top:70px;
+    }
+
+}
