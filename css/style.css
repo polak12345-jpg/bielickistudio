@@ -17,6 +17,58 @@ body {
     padding-top: 80px; /* POPRAWKA: Zapobiega wjeżdżaniu sekcji pod fixed navbar */
 }
 
+.visual-box {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.visual-box img {
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+
+/* przyciski na górze zdjęcia */
+
+.visual-buttons {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    display: flex;
+    gap: 15px;
+}
+
+
+.visual-buttons button {
+
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(8px);
+
+    color: white;
+    border: 1px solid rgba(255,255,255,0.4);
+
+    padding: 10px 22px;
+    border-radius: 25px;
+
+    cursor: pointer;
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.visual-buttons button:hover {
+
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+
+}
+
 a {
     text-decoration: none;
     color: white;
