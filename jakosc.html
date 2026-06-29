@@ -345,6 +345,54 @@ document.querySelectorAll(".menu a").forEach(link=>{
 
 });
 </script>
+<script>
+
+function changeVisual(type){
+
+const img = document.getElementById("visualImage");
+const text = document.getElementById("visualText");
+
+
+if(type === "live"){
+
+    img.style.opacity = "0";
+
+    setTimeout(()=>{
+
+        img.src="images/kuchnia8.png";
+        img.style.opacity="1";
+
+    },300);
+
+
+    text.innerHTML="Realizacja na żywo";
+
+
+}
+
+
+
+if(type === "project"){
+
+    img.style.opacity="0";
+
+
+    setTimeout(()=>{
+
+        img.src="images/projekt4.png";
+        img.style.opacity="1";
+
+    },300);
+
+
+    text.innerHTML="Podgląd projektu 3D";
+
+}
+
+
+}
+
+</script>
 
 </body>
 
