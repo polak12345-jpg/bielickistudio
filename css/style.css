@@ -1226,7 +1226,7 @@ transform:scale(1.05);
     }
 
     .menu.active{
-        left:0;
+        right:0;
     }
 
     .menu a{
