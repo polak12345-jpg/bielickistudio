@@ -1173,3 +1173,34 @@ transform:scale(1.05);
 .fb-page iframe {
     max-width: 100% !important;
 }
+
+/* Telefon - poprawka menu */
+@media (max-width: 768px) {
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 10px 15px;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .menu a {
+        flex-shrink: 0;
+        font-size: 14px;
+    }
+
+}
