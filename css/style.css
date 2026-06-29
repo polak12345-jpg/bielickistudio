@@ -125,7 +125,7 @@ a {
 }
 /* --- HERO --- */
 .hero {
-    height: calc(100vh - 80px); /* Dopasowanie wysokości do okna */
+    height: calc(100vh - 60px); /* Dopasowanie wysokości do okna */
     display: flex;
     align-items: center;
     background: linear-gradient(#000000a0, #000000a0),
