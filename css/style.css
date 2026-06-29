@@ -1196,7 +1196,7 @@ transform:scale(1.05);
 @media(max-width:800px){
 
     .logo img{
-        height:200px;
+        height:300px;
     }
 
     .hamburger{
@@ -1267,7 +1267,7 @@ transform:scale(1.05);
     }
 
     .logo img{
-        height:200px !important;
+        height:300px !important;
         width:auto;
         display:block;
     }
