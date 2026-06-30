@@ -1350,3 +1350,7 @@ transform:scale(1.05);
     }
 
 }
+
+#lightbox-img{
+    transition: opacity .2s ease;
+}
