@@ -950,15 +950,9 @@ padding:120px 0;
     padding-bottom: 0px;
 }
 
-#lightbox-img {
-    opacity: 1;
-    transition: opacity 0.2s ease;
+#lightbox-img{
+    transition:none;
 }
-
-#lightbox-img.fade {
-    opacity: 0;
-}
-
 
 
 .more-grid{
