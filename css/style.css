@@ -1411,87 +1411,101 @@ transform:scale(1.05);
 
 @media(max-width:900px){
 
-.hero .container,
-.hero-content{
+    .hero .container,
+    .hero-content{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 
-    flex-direction:column;
-    align-items:flex-start;
+
+    .sale-box{
+
+        width:100%;
+        max-width:380px;
+        margin-top:40px;
+
+        min-height:420px;
+        display:flex;
+        flex-direction:column;
+    }
+
+
+    .sale-header{
+
+        background:#ff3333;
+        padding:18px;
+
+        text-align:center;
+
+        font-size:28px;
+        font-weight:800;
+    }
+
+
+    .sale-content{
+
+        flex:1;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        text-align:center;
+
+        padding:40px;
+    }
+
+
+    .sale-content h3{
+
+        font-size:30px;
+        margin-bottom:20px;
+
+    }
+
+
+    .sale-content p{
+
+        color:#ccc;
+        line-height:1.6;
+        margin-bottom:30px;
+
+    }
 
 }
 
 
-.sale-box{
-
-    width:100%;
-    max-width:380px;
-    margin-top:40px;
-
-}
-
-.sale-box{
-    min-height:420px;
-    display:flex;
-    flex-direction:column;
-}
-
-
-.sale-header{
-    background:#ff3333;
-    padding:18px;
-
-    text-align:center;
-
-    font-size:28px;
-    font-weight:800;
-}
-
-
-.sale-content{
-    flex:1;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    padding:40px;
-}
-
-
-.sale-content h3{
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-
-.sale-content p{
-    color:#ccc;
-    line-height:1.6;
-    margin-bottom:30px;
-}
-
-/* ===== POPRAWKI HERO MOBILE ===== */
+/* ===== HERO MOBILE ===== */
 
 @media(max-width:700px){
 
+
     .hero .container,
     .hero-content{
+
         align-items:center;
         text-align:center;
+
     }
 
+
     .hero-left{
+
         width:100%;
+
         display:flex;
         flex-direction:column;
         align-items:center;
+
     }
+
 
     .hero h1,
     .hero p{
+
         text-align:center;
+
     }
 
 
@@ -1511,12 +1525,40 @@ transform:scale(1.05);
 
         display:none;
 
+        margin:0;
+
     }
 
 
     .sale-box.active{
 
         display:flex;
+
+    }
+
+
+    .sale-close{
+
+        position:absolute;
+
+        top:15px;
+        right:15px;
+
+        width:45px;
+        height:45px;
+
+        border:none;
+        border-radius:50%;
+
+        background:#fff;
+        color:#000;
+
+        font-size:32px;
+        font-weight:800;
+
+        cursor:pointer;
+
+        z-index:10;
 
     }
 
