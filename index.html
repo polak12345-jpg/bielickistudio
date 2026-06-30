@@ -57,6 +57,10 @@
 
         <div class="sale-box animate-fade delay-3" id="saleBox">
 
+            <button class="sale-close" id="saleClose">
+                ×
+            </button>
+
             <div class="sale-header">
                 WYPRZEDAŻ!
             </div>
@@ -195,10 +199,26 @@ const saleBox = document.getElementById("saleBox");
 const saleClose = document.getElementById("saleClose");
 
 
-saleClose.addEventListener("click", (e)=>{
+saleClose.addEventListener("click",(e)=>{
+
     e.stopPropagation();
     saleBox.classList.remove("active");
+
 });
+
+if(window.innerWidth <= 700){
+
+    window.addEventListener("load",()=>{
+
+        setTimeout(()=>{
+
+            saleBox.classList.add("active");
+
+        },500);
+
+    });
+
+}
 </script>
 </body>
 </html>
