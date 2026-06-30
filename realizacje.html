@@ -73,20 +73,20 @@ Nasze Realizacje
 <div class="gallery animate-fade delay-1">
 
 
-<img src="images/kuchnia1.webp" alt="">
-<img src="images/kuchnia2.webp" alt="">
-<img src="images/zabudowa1.webp" alt="">
-<img src="images/kuchnia3.webp" alt="">
-<img src="images/kuchnia4.webp" alt="">
-<img src="images/zabudowa2.webp" alt="">
-<img src="images/kuchnia5.webp" alt="">
-<img src="images/kuchnia6.webp" alt="">
-<img src="images/kuchnia7.webp" alt="">
-<img src="images/zabudowa3.webp" alt="">
-<img src="images/kuchnia8.webp" alt="">
-<img src="images/kuchnia9.webp" alt="">
-<img src="images/kuchnia10.webp" alt="">
-<img src="images/zabudowa4.webp" alt="">
+<img src="images/kuchnia1.webp" loading="lazy" alt="">
+<img src="images/kuchnia2.webp" loading="lazy" alt="">
+<img src="images/zabudowa1.webp" loading="lazy" alt="">
+<img src="images/kuchnia3.webp" loading="lazy" alt="">
+<img src="images/kuchnia4.webp" loading="lazy" alt="">
+<img src="images/zabudowa2.webp" loading="lazy" alt="">
+<img src="images/kuchnia5.webp" loading="lazy" alt="">
+<img src="images/kuchnia6.webp" loading="lazy" alt="">
+<img src="images/kuchnia7.webp" loading="lazy" alt="">
+<img src="images/zabudowa3.webp" loading="lazy" alt="">
+<img src="images/kuchnia8.webp" loading="lazy" alt="">
+<img src="images/kuchnia9.webp" loading="lazy" alt="">
+<img src="images/kuchnia10.webp" loading="lazy" alt="">
+<img src="images/zabudowa4.webp" loading="lazy" alt="">
 
 
 </div>
@@ -302,7 +302,22 @@ let moreCurrent = 0;
 
 function changeLightboxImage(src){
 
-    lightboxImg.src = src;
+    lightboxImg.style.opacity = "0";
+
+
+    const tempImg = new Image();
+
+
+    tempImg.onload = function(){
+
+        lightboxImg.src = src;
+
+        lightboxImg.style.opacity = "1";
+
+    };
+
+
+    tempImg.src = src;
 
 }
 
@@ -408,6 +423,7 @@ const moreGalleries = [
 "images/kuchnia46.webp"
 ],
 
+
 [
 "images/zabudowa5.webp",
 "images/zabudowa6.webp",
@@ -416,6 +432,7 @@ const moreGalleries = [
 "images/zabudowa10.webp",
 "images/zabudowa11.webp"
 ],
+
 
 [
 "images/szuflada1.webp",
