@@ -585,11 +585,11 @@ footer {
 }
 
 .delay-2 {
-    animation-delay: 1.2s;
+    animation-delay: 1.0s;
 }
 
 .delay-3 {
-    animation-delay: 1.6s;
+    animation-delay: 1.2s;
 }
 
 @media(max-width: 800px) {
