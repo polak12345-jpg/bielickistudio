@@ -580,17 +580,9 @@ footer {
     animation: fadeInUp 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-.delay-1 {
-    animation-delay: .8s;
-}
-
-.delay-2 {
-    animation-delay: .9s;
-}
-
-.delay-3 {
-    animation-delay: .12s;
-}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
 
 @media(max-width: 800px) {
     body {
