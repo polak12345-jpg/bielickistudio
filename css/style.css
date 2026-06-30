@@ -1564,30 +1564,28 @@ transform:scale(1.05);
         text-align:center;
     }
 
-    .sale-box{
-        position:fixed;
+.sale-box{
+    width:380px;
+    min-height:420px;
+    flex-shrink:0;
 
-        left:5%;
-        top:50%;
-        transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    position:relative;
 
-        width:90%;
-        max-width:none;
-        height:85vh;
+    border-radius:25px;
+    overflow:hidden;
 
-        margin:0;
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.7);
 
-        z-index:999999;
+    border:1px solid rgba(255,255,255,.15);
+    background:#000;
+}
 
-        display:flex;
-        flex-direction:column;
-
-        opacity:0;
-        visibility:hidden;
-        pointer-events:none;
-
-        transition:.3s;
-    }
+.sale-close{
+    display:none;
+}
 
     .sale-box.active{
         opacity:1;
