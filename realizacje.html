@@ -406,6 +406,20 @@ lightbox.classList.add("active");
 
 const moreGalleries = [
 
+    // ===== PRELOAD ZDJĘĆ =====
+
+// Główna galeria
+images.forEach(img => {
+    const preload = new Image();
+    preload.src = img.src;
+});
+
+// Galerie "Więcej realizacji"
+moreGalleries.flat().forEach(src => {
+    const preload = new Image();
+    preload.src = src;
+});
+
 [
 "images/kuchnia11.png",
 "images/kuchnia12.png",
