@@ -1348,3 +1348,152 @@ transform:scale(1.05);
 #lightbox-img{
     transition: opacity .2s ease;
 }
+
+/* ===== OFERTA W HERO ===== */
+
+
+.hero .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+}
+
+
+.hero-left{
+    max-width:700px;
+}
+
+
+
+.sale-box{
+
+    width:380px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.7);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:#000;
+
+}
+
+
+
+.sale-header{
+
+    background:#d60000;
+
+    color:white;
+
+    text-align:center;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    padding:22px;
+
+    letter-spacing:1px;
+
+}
+
+
+
+.sale-content{
+
+    background:#050505;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+
+
+.sale-content h3{
+
+    font-size:25px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.sale-content p{
+
+    color:#ddd;
+
+    line-height:1.6;
+
+    font-size:16px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.sale-content a{
+
+    display:inline-block;
+
+    padding:13px 28px;
+
+    border-radius:30px;
+
+    background:#5293ef;
+
+    color:white;
+
+    font-weight:800;
+
+    transition:.3s;
+
+}
+
+
+
+.sale-content a:hover{
+
+    background:#22d3ee;
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.hero .container{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+
+
+.sale-box{
+
+    width:100%;
+
+    max-width:380px;
+
+    margin-top:40px;
+
+}
+
+
+}
