@@ -82,20 +82,20 @@ align-items:flex-start;
 <div class="gallery animate-fade delay-1">
 
 
-<img src="images/kuchnia1.png" alt="">
-<img src="images/kuchnia2.png" alt="">
-<img src="images/zabudowa1.jpg" alt="">
-<img src="images/kuchnia3.png" alt="">
-<img src="images/kuchnia4.png" alt="">
-<img src="images/zabudowa2.jpg" alt="">
-<img src="images/kuchnia5.png" alt="">
-<img src="images/kuchnia6.png" alt="">
-<img src="images/kuchnia7.png" alt="">
-<img src="images/zabudowa3.jpg" alt="">
-<img src="images/kuchnia8.png" alt="">
-<img src="images/kuchnia9.png" alt="">
-<img src="images/kuchnia10.png" alt="">
-<img src="images/zabudowa4.jpg" alt="">
+<img src="images/kuchnia1.webp" alt="">
+<img src="images/kuchnia2.webp" alt="">
+<img src="images/zabudowa1.webp" alt="">
+<img src="images/kuchnia3.webp" alt="">
+<img src="images/kuchnia4.webp" alt="">
+<img src="images/zabudowa2.webp" alt="">
+<img src="images/kuchnia5.webp" alt="">
+<img src="images/kuchnia6.webp" alt="">
+<img src="images/kuchnia7.webp" alt="">
+<img src="images/zabudowa3.webp" alt="">
+<img src="images/kuchnia8.webp" alt="">
+<img src="images/kuchnia9.webp" alt="">
+<img src="images/kuchnia10.webp" alt="">
+<img src="images/zabudowa4.webp" alt="">
 
 
 </div>
@@ -406,105 +406,89 @@ lightbox.classList.add("active");
 
 const moreGalleries = [
 
-    // ===== PRELOAD ZDJĘĆ =====
-
-// Główna galeria
-images.forEach(img => {
-    const preload = new Image();
-    preload.src = img.src;
-});
-
-// Galerie "Więcej realizacji"
-moreGalleries.flat().forEach(src => {
-    const preload = new Image();
-    preload.src = src;
-});
-
 [
-"images/kuchnia11.png",
-"images/kuchnia12.png",
-"images/kuchnia13.png",
-"images/kuchnia14.png",
-"images/kuchnia15.png",
-"images/kuchnia16.png",
-"images/kuchnia17.png",
-"images/kuchnia18.png",
-"images/kuchnia19.png",
-"images/kuchnia20.png",
-"images/kuchnia21.png",
-"images/kuchnia22.png",
-"images/kuchnia23.png",
-"images/kuchnia24.png",
-"images/kuchnia25.png",
-"images/kuchnia26.png",
-"images/kuchnia27.png",
-"images/kuchnia28.png",
-"images/kuchnia29.png",
-"images/kuchnia30.png",
-"images/kuchnia31.png",
-"images/kuchnia32.png",
-"images/kuchnia33.png",
-"images/kuchnia34.png",
-"images/kuchnia35.png",
-"images/kuchnia36.png",
-"images/kuchnia37.png",
-"images/kuchnia38.png",
-"images/kuchnia39.png",
-"images/kuchnia40.png",
-"images/kuchnia41.png",
-"images/kuchnia42.png",
-"images/kuchnia43.png",
-"images/kuchnia44.png",
-"images/kuchnia45.png",
-"images/kuchnia46.png"
+"images/kuchnia11.webp",
+"images/kuchnia12.webp",
+"images/kuchnia13.webp",
+"images/kuchnia14.webp",
+"images/kuchnia15.webp",
+"images/kuchnia16.webp",
+"images/kuchnia17.webp",
+"images/kuchnia18.webp",
+"images/kuchnia19.webp",
+"images/kuchnia20.webp",
+"images/kuchnia21.webp",
+"images/kuchnia22.webp",
+"images/kuchnia23.webp",
+"images/kuchnia24.webp",
+"images/kuchnia25.webp",
+"images/kuchnia26.webp",
+"images/kuchnia27.webp",
+"images/kuchnia28.webp",
+"images/kuchnia29.webp",
+"images/kuchnia30.webp",
+"images/kuchnia31.webp",
+"images/kuchnia32.webp",
+"images/kuchnia33.webp",
+"images/kuchnia34.webp",
+"images/kuchnia35.webp",
+"images/kuchnia36.webp",
+"images/kuchnia37.webp",
+"images/kuchnia38.webp",
+"images/kuchnia39.webp",
+"images/kuchnia40.webp",
+"images/kuchnia41.webp",
+"images/kuchnia42.webp",
+"images/kuchnia43.webp",
+"images/kuchnia44.webp",
+"images/kuchnia45.webp",
+"images/kuchnia46.webp"
 ],
 
-
 [
-"images/zabudowa5.jpg",
-"images/zabudowa6.jpg",
-"images/zabudowa7.jpg",
-"images/zabudowa9.jpg",
-"images/zabudowa10.jpg",
-"images/zabudowa11.jpg"
+"images/zabudowa5.webp",
+"images/zabudowa6.webp",
+"images/zabudowa7.webp",
+"images/zabudowa9.webp",
+"images/zabudowa10.webp",
+"images/zabudowa11.webp"
 ],
 
-
 [
-"images/szuflada1.jpg",
-"images/szuflada2.jpg",
-"images/szuflada3.jpg",
-"images/szuflada4.jpg",
-"images/szuflada5.jpg",
-"images/szuflada6.jpg",
-"images/szuflada7.jpg",
-"images/szuflada8.jpg",
-"images/szuflada9.jpg",
-"images/szuflada10.jpg",
-"images/szuflada11.jpg",
-"images/szuflada12.jpg",
-"images/szuflada13.jpg",
-"images/szuflada14.jpg",
-"images/szuflada15.jpg",
-"images/szuflada16.jpg",
-"images/szuflada17.jpg",
-"images/szuflada18.jpg",
-"images/szuflada19.jpg",
-"images/szuflada20.jpg",
-"images/szuflada21.jpg",
-"images/szuflada22.jpg",
-"images/szuflada23.jpg",
-"images/szuflada24.jpg",
-"images/szuflada25.jpg",
-"images/szuflada26.jpg",
-"images/szuflada27.jpg",
-"images/szuflada28.jpg",
-"images/szuflada29.jpg",
-"images/szuflada30.jpg",
-"images/szuflada31.jpg",
-"images/szuflada32.jpg",
-"images/szuflada33.jpg",
-"images/szuflada34.jpg"
+"images/szuflada1.webp",
+"images/szuflada2.webp",
+"images/szuflada3.webp",
+"images/szuflada4.webp",
+"images/szuflada5.webp",
+"images/szuflada6.webp",
+"images/szuflada7.webp",
+"images/szuflada8.webp",
+"images/szuflada9.webp",
+"images/szuflada10.webp",
+"images/szuflada11.webp",
+"images/szuflada12.webp",
+"images/szuflada13.webp",
+"images/szuflada14.webp",
+"images/szuflada15.webp",
+"images/szuflada16.webp",
+"images/szuflada17.webp",
+"images/szuflada18.webp",
+"images/szuflada19.webp",
+"images/szuflada20.webp",
+"images/szuflada21.webp",
+"images/szuflada22.webp",
+"images/szuflada23.webp",
+"images/szuflada24.webp",
+"images/szuflada25.webp",
+"images/szuflada26.webp",
+"images/szuflada27.webp",
+"images/szuflada28.webp",
+"images/szuflada29.webp",
+"images/szuflada30.webp",
+"images/szuflada31.webp",
+"images/szuflada32.webp",
+"images/szuflada33.webp",
+"images/szuflada34.webp"
 ]
 
 ];
