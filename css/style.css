@@ -165,6 +165,24 @@ a {
     color: #000000;                  /* Biały tekst na ciemniejszym tle */
 }
 
+.btn2 {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #ff3333; /* Jaśniejszy odcień na start */
+    color: #ffffff;                /* Ciemny tekst dla kontrastu z jasnym tłem */
+    border-radius: 50px;
+    font-weight: 800;
+    transition: background 0.3s ease, color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.btn2:hover {
+    background: #a82c2c; /* Ciemniejszy odcień po najechaniu */
+    color: #000000;                  /* Biały tekst na ciemniejszym tle */
+}
+
 /* --- SEKCJE I KOMPOZYCJA (Dodane bezpieczne odstępy) --- */
 section {
     padding: 120px 0; /* Zwiększony padding dla lepszego "oddechu" strony */
