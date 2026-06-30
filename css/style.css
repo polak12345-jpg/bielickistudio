@@ -179,7 +179,7 @@ a {
 }
 
 .btn2:hover {
-    background: #a82c2c; /* Ciemniejszy odcień po najechaniu */
+    background: #ff6836; /* Ciemniejszy odcień po najechaniu */
     color: #000000;                  /* Biały tekst na ciemniejszym tle */
 }
 
