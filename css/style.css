@@ -1482,7 +1482,6 @@ transform:scale(1.05);
         text-align:center;
     }
 
-
     .hero-left{
         width:100%;
         display:flex;
@@ -1490,23 +1489,11 @@ transform:scale(1.05);
         align-items:center;
     }
 
-
-    .hero h1{
-        text-align:center;
-    }
-
-
+    .hero h1,
     .hero p{
         text-align:center;
     }
 
-
-    .hero-left .btn{
-        margin:auto;
-    }
-
-
-    /* karta wyprzedaży na telefonie */
 
     .sale-box{
 
@@ -1519,7 +1506,6 @@ transform:scale(1.05);
 
         width:90%;
         height:85vh;
-        min-height:500px;
 
         z-index:999999;
 
@@ -1529,31 +1515,9 @@ transform:scale(1.05);
 
 
     .sale-box.active{
+
         display:flex;
+
     }
-
-
-}
-
-    .sale-close{
-
-    position:absolute;
-
-    top:15px;
-    right:15px;
-
-    width:45px;
-    height:45px;
-
-    border-radius:50%;
-
-    border:none;
-
-    background:rgba(0,0,0,.6);
-    color:white;
-
-    font-size:32px;
-
-    cursor:pointer;
 
 }
