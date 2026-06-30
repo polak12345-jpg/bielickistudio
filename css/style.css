@@ -441,30 +441,39 @@ font-size:28px;
 
 /* --- GALERIA --- */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    width: 100%;
+}
+
+
+.gallery img {
+    width: 85%;
+    max-width: 1000px;
+    height: auto;
+    min-height: 500px;
+    object-fit: cover;
+
+    border-radius: 25px;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.gallery img:hover {
+    transform: scale(1.02);
 }
 
 @media(max-width:768px){
 
-    .gallery {
-        grid-template-columns: 1fr;
+    .gallery img {
+        width: 100%;
+        min-height: auto;
     }
 
-}
-
-.gallery img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.03);
 }
 
 /* --- FORMULARZ --- */
