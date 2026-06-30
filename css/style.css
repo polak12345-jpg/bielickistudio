@@ -441,25 +441,31 @@ font-size:28px;
 
 /* --- GALERIA --- */
 .gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 45px;
-    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:45px;
+    width:100%;
+    opacity:1;
 }
 
 
 .gallery img {
-    width: 85%;
-    max-width: 1000px;
-    height: auto;
-    min-height: 500px;
-    object-fit: cover;
+    width:85%;
+    max-width:1000px;
+    height:auto;
+    min-height:500px;
+    object-fit:cover;
 
-    border-radius: 25px;
-    cursor: pointer;
+    border-radius:25px;
+    cursor:pointer;
 
-    transition: .3s;
+    opacity:1 !important;
+}
+
+
+.animate-fade{
+    opacity:1;
 }
 
 
