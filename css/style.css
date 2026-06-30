@@ -1376,6 +1376,84 @@ transform:scale(1.05);
     transition: opacity .2s ease;
 }
 
+    backdrop-filter:blur(18px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+
+    padding-top:40px;
+    gap:30px;
+
+    transition:right .35s ease;
+}
+
+.menu.active{
+    right:0;
+}
+
+    .menu a{
+        font-size:22px;
+        margin:0;
+    }
+
+    .hamburger.active span:nth-child(1){
+        transform:translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2){
+        opacity:0;
+    }
+
+    .hamburger.active span:nth-child(3){
+        transform:translateY(-9px) rotate(-45deg);
+    }
+
+}
+
+/* POPRAWKA MOBILE NAVBAR */
+@media(max-width:800px){
+
+    .navbar{
+        height:80px;
+        overflow:visible;
+    }
+
+    .nav-container{
+        height:80px;
+    }
+
+    .logo{
+        height:120px;
+        display:flex;
+        align-items:center;
+    }
+
+    .logo img{
+        height:250px !important;
+        width:auto;
+        display:block;
+    }
+
+
+    .hamburger{
+        display:flex;
+        margin-left:auto;
+        z-index:10000;
+    }
+
+
+    .menu{
+        top:80px;
+    }
+
+}
+
+#lightbox-img{
+    transition: opacity .2s ease;
+}
+
 /* ===== OFERTA W HERO ===== */
 
 
@@ -1409,6 +1487,40 @@ transform:scale(1.05);
     background:#000;
 }
 
+.sale-header{
+    background:#ff3333;
+    padding:18px;
+
+    text-align:center;
+
+    font-size:28px;
+    font-weight:800;
+}
+
+.sale-content{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+}
+
+.sale-content h3{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.sale-content p{
+    color:#ccc;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
 @media(max-width:900px){
 
     .hero .container,
@@ -1427,50 +1539,6 @@ transform:scale(1.05);
         min-height:420px;
         display:flex;
         flex-direction:column;
-    }
-
-
-    .sale-header{
-
-        background:#ff3333;
-        padding:18px;
-
-        text-align:center;
-
-        font-size:28px;
-        font-weight:800;
-    }
-
-
-    .sale-content{
-
-        flex:1;
-
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-
-        text-align:center;
-
-        padding:40px;
-    }
-
-
-    .sale-content h3{
-
-        font-size:30px;
-        margin-bottom:20px;
-
-    }
-
-
-    .sale-content p{
-
-        color:#ccc;
-        line-height:1.6;
-        margin-bottom:30px;
-
     }
 
 }
@@ -1553,3 +1621,4 @@ transform:scale(1.05);
     }
 
 }
+
