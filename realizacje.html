@@ -302,22 +302,7 @@ let moreCurrent = 0;
 
 function changeLightboxImage(src){
 
-    lightboxImg.style.opacity = "0";
-
-
-    const tempImg = new Image();
-
-
-    tempImg.onload = function(){
-
-        lightboxImg.src = src;
-
-        lightboxImg.style.opacity = "1";
-
-    };
-
-
-    tempImg.src = src;
+    lightboxImg.src = src;
 
 }
 
