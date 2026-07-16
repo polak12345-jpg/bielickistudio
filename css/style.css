@@ -17,6 +17,11 @@ body {
     padding-top: 80px; /* POPRAWKA: Zapobiega wjeżdżaniu sekcji pod fixed navbar */
 }
 
+.gallery img:first-child{
+    grid-column: 2;
+    justify-self: center;
+}
+
 a {
     text-decoration: none;
     color: white;
