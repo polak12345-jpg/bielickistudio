@@ -162,50 +162,24 @@ a{
 /* LOGO */
 
 
-.logo{
+.logo img { 
+   height: 300px; width: auto; object-fit: contain; 
+} 
 
+.footer-logo { 
+   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0px; 
+} 
 
-    display:flex;
+.footer-logo img { 
+   width: 300px; height: auto; object-fit: contain; opacity: 0.5; 
+} 
 
-    align-items:center;
+.footer-logo div { 
+   font-size: 1px; font-weight: 800; margin-top: -70px; 
+} 
 
-    gap:8px;
-
-
-    font-size:24px;
-
-    font-weight:800;
-
-    letter-spacing:.5px;
-
-    white-space:nowrap;
-
-
-}
-
-
-.logo span{
-
-    font-weight:400;
-
-    color:white;
-
-}
-
-
-
-/* LOGO OBRAZEK */
-
-.logo img{
-
-
-    height:55px;
-
-    width:auto;
-
-    object-fit:contain;
-
-
+.footer-logo span {
+   font-weight: 400; 
 }
 
 
@@ -1979,36 +1953,6 @@ footer{
 
 
 
-.footer-logo{
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-    align-items:center;
-
-
-}
-
-
-
-.footer-logo img{
-
-
-    width:220px;
-
-
-    height:auto;
-
-
-    opacity:.5;
-
-
-}
-
 
 
 /* ===========================
@@ -2247,16 +2191,6 @@ body{
 
 
     font-size:18px;
-
-
-}
-
-
-
-.logo img{
-
-
-    height:45px;
 
 
 }
