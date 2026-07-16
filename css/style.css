@@ -601,15 +601,6 @@ section{
 
 }
 
-.about-header-image {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 35px;
-    object-fit: cover;
-}
-
 
 
 .cards{
