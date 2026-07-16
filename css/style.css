@@ -941,10 +941,8 @@ footer {
 
 
 .more-projects{
-
-background:#080808;
-padding:120px 0;
-
+    background:#111111;   /* taki sam jak .dark */
+    padding:40px 0 120px;
 }
 
 .realizacje-section {
