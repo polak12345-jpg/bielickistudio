@@ -25,74 +25,6 @@
     margin-top:50px;
 }
 
-/* ===== WYPRZEDAŻ ===== */
-
-.sale-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:35px;
-    margin-top:30px;
-    margin-bottom:30px;
-}
-
-.sale-card{
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,.12);
-    transition:.3s;
-}
-
-.sale-card:hover{
-    transform:translateY(-8px);
-}
-
-.sale-card img{
-    width:100%;
-    height:240px;
-    object-fit:cover;
-    display:block;
-}
-
-.sale-content{
-    padding:25px;
-    text-align:center;
-}
-
-.sale-content h3{
-    margin-bottom:12px;
-}
-
-.sale-content p{
-    color:#666;
-    margin-bottom:20px;
-    line-height:1.6;
-}
-
-.sale-prices{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:15px;
-    margin-bottom:25px;
-}
-
-.old-price{
-    text-decoration:line-through;
-    color:#999;
-    font-size:18px;
-}
-
-.new-price{
-    color:#caa25a;
-    font-size:28px;
-    font-weight:700;
-}
-
-.sale-card .btn{
-    width:100%;
-}
-
 /* ===== WYPRZEDAŻ W MENU MOBILNYM ===== */
 
 .mobile-sale-link{
@@ -335,4 +267,72 @@
         color:#fff !important;
     }
 
+}
+
+/* ===== WYPRZEDAŻ ===== */
+
+.sale-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.sale-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.sale-card:hover{
+    transform:translateY(-8px);
+}
+
+.sale-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    display:block;
+}
+
+.sale-content{
+    padding:25px;
+    text-align:center;
+}
+
+.sale-content h3{
+    margin-bottom:12px;
+}
+
+.sale-content p{
+    color:#666;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.sale-prices{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#999;
+    font-size:18px;
+}
+
+.new-price{
+    color:#caa25a;
+    font-size:28px;
+    font-weight:700;
+}
+
+.sale-card .btn{
+    width:100%;
 }
