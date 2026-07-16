@@ -601,6 +601,14 @@ section{
 
 }
 
+.page-title-section .about-header-image {
+    width:100%;
+    max-width:1200px;
+    height:auto;
+    display:block;
+    margin:35px auto 0;
+}
+
 
 
 .cards{
