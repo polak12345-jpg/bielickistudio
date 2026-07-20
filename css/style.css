@@ -1143,6 +1143,16 @@ transition:.3s;
 
 }
 
+.more-overlay2{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.more-overlay2 button{
+    margin:0;
+}
+
 
 
 .more-overlay button:hover{
