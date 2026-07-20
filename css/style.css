@@ -10,15 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.hero-top-title {
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 200px;
-    opacity: 0.9;
-}
-
 .about-header-image{
     display: block;
     width: 70%;
