@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Łazienki | Studio BIELICKI</title>
+<link rel="icon" type="image/png" href="images/logo11.png">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-sale.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAWIGACJA -->
+
+<nav class="navbar">
+    <div class="container nav-container">
+
+        <div class="logo">
+            <img src="images/logo10.png" alt="Studio BIELICKI2">
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu" id="menu">
+            <a href="index.html">Start</a>
+            <a href="about.html">O nas</a>
+            <a href="jakosc.html">Jakość</a>
+            <a href="realizacje.html">Realizacje</a>
+            <a href="opinie.html">Opinie</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="wyprzedaz.html" class="mobile-sale-link">Wyprzedaż</a>
+        </div>
+
+    </div>
+</nav>
+
+
+
+<header class="page-title-section animate-fade">
+
+<div class="container">
+
+<h1 class="title">
+Kuchnie
+</h1>
+
+</div>
+
+</header>
+
+
+
+
+
+<section class="dark realizacje-section">
+
+    <div class="container">
+
+        <div class="more-grid">
+
+            <div class="more-card animate-fade delay-1">
+                <img src="images/zabudowa6.webp" alt="Kuchnie">
+
+                <div class="more-overlay">
+                    <button onclick="openMoreGallery(0)">
+                        Zobacz
+                    </button>
+                </div>
+            </div>
+
+            <div class="more-card animate-fade delay-1">
+                <img src="images/zabudowa10.webp" alt="Kuchnie">
+
+                <div class="more-overlay">
+                    <button onclick="openMoreGallery(1)">
+                        Zobacz
+                    </button>
+                </div>
+            </div>
+
+            <div class="more-card animate-fade delay-1">
+                <img src="images/zabudowa13.webp" alt="Kuchnie">
+
+                <div class="more-overlay">
+                    <button onclick="openMoreGallery(2)">
+                        Zobacz
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <footer>
+        <div class="container">
+
+            <div class="footer-logo">
+                <img src="images/logo9.png" alt="Studio BIELICKI">
+                <div><span>.</span></div>
+            </div>
+
+            <p style="font-size: 13px; margin-top: 15px; color: #444;">
+                &copy; 2026 Studio BIELICKI - Wszelkie prawa zastrzeżone.
+            </p>
+
+        </div>
+    </footer>
+
+
+
+
+
+<div id="topBtn">
+↑
+</div>
+
+
+<div id="lightbox" class="lightbox">
+
+    <div class="lightbox-content">
+
+        <span class="lightbox-close">&times;</span>
+
+        <span id="lightbox-counter">
+        1 / 1
+        </span>
+
+        <button class="lightbox-prev">‹</button>
+
+        <img id="lightbox-img" src="" alt="Powiększone zdjęcie">
+
+        <button class="lightbox-next">›</button>
+
+    </div>
+
+</div>
+
+
+<script src="js/script.js"></script>
+
+
+
+<script>
+
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+
+document.addEventListener("keydown", function(e){
+
+if(e.key==="F12"){
+e.preventDefault();
+}
+
+if(
+e.ctrlKey &&
+e.shiftKey &&
+(
+e.key==="I" ||
+e.key==="J" ||
+e.key==="C"
+)
+){
+e.preventDefault();
+}
+
+if(e.ctrlKey && e.key==="U"){
+e.preventDefault();
+}
+
+});
+
+
+// ===== ELEMENTY =====
+
+const images = [...document.querySelectorAll(".gallery img")];
+
+const lightbox = document.getElementById("lightbox");
+
+const lightboxImg = document.getElementById("lightbox-img");
+
+const closeBtn = document.querySelector(".lightbox-close");
+
+const prevBtn = document.querySelector(".lightbox-prev");
+
+const nextBtn = document.querySelector(".lightbox-next");
+
+const counter = document.getElementById("lightbox-counter");
+
+
+let current = 0;
+
+let activeGallery = images;
+
+let moreCurrent = 0;
+
+
+
+// ===== ANIMOWANA ZMIANA ZDJĘCIA =====
+
+function changeLightboxImage(src){
+
+    lightboxImg.src = src;
+
+}
+
+
+
+
+// ===== ZWYKŁA GALERIA =====
+
+
+function updateCounter(){
+
+    let index;
+
+    if(activeGallery === images){
+        index = current;
+    } else {
+        index = moreCurrent;
+    }
+
+    counter.innerHTML = `${index + 1} / ${activeGallery.length}`;
+
+}
+
+
+
+function showImage(){
+
+    changeLightboxImage(
+        activeGallery[current].src || activeGallery[current]
+    );
+
+    updateCounter();
+
+}
+
+
+
+images.forEach((img,index)=>{
+
+
+img.addEventListener("click",()=>{
+
+
+activeGallery = images;
+
+current = index;
+
+
+showImage();
+
+
+lightbox.classList.add("active");
+
+
+});
+
+
+});
+
+
+
+
+
+
+const moreGalleries = [
+
+/* 0 */
+[
+"images/zabudowa6.webp",
+"images/zabudowa12.webp"
+],
+
+/* 1 */
+[
+"images/zabudowa10.webp",
+"images/zabudowa11.webp"
+],
+
+/* 2 */
+[
+"images/zabudowa13.webp",
+"images/zabudowa14.webp"
+]
+
+];
+
+
+
+
+
+window.openMoreGallery = function(id){
+
+
+activeGallery = moreGalleries[id];
+
+
+moreCurrent = 0;
+
+
+changeLightboxImage(activeGallery[0]);
+
+updateCounter();
+
+
+lightbox.classList.add("active");
+
+
+};
+
+
+
+
+
+
+// ===== STRZAŁKI =====
+
+
+nextBtn.addEventListener("click",(e)=>{
+
+
+e.stopPropagation();
+
+
+if(!lightbox.classList.contains("active")) return;
+
+
+
+if(activeGallery === images){
+
+
+current++;
+
+
+if(current >= activeGallery.length){
+current = 0;
+}
+
+
+showImage();
+
+
+
+}else{
+
+
+moreCurrent++;
+
+
+if(moreCurrent >= activeGallery.length){
+moreCurrent = 0;
+}
+
+
+changeLightboxImage(
+    activeGallery[moreCurrent]
+);
+
+updateCounter();
+
+
+}
+
+
+
+});
+
+
+
+
+
+
+
+prevBtn.addEventListener("click",(e)=>{
+
+
+e.stopPropagation();
+
+
+if(!lightbox.classList.contains("active")) return;
+
+
+
+if(activeGallery === images){
+
+
+current--;
+
+
+if(current < 0){
+current = activeGallery.length-1;
+}
+
+
+showImage();
+
+
+
+}else{
+
+    moreCurrent--;
+
+    if(moreCurrent < 0){
+        moreCurrent = activeGallery.length - 1;
+    }
+
+    changeLightboxImage(
+        activeGallery[moreCurrent]
+    );
+
+    updateCounter();
+
+}
+
+
+});
+
+
+
+
+
+
+
+// ===== ZAMYKANIE =====
+
+
+closeBtn.addEventListener("click",()=>{
+
+lightbox.classList.remove("active");
+
+});
+
+
+
+lightbox.addEventListener("click",e=>{
+
+
+if(e.target === lightbox){
+
+lightbox.classList.remove("active");
+
+}
+
+
+});
+
+
+
+
+
+
+
+// ===== KLAWIATURA =====
+
+
+document.addEventListener("keydown",e=>{
+
+
+if(!lightbox.classList.contains("active")) return;
+
+
+
+if(e.key==="Escape"){
+
+lightbox.classList.remove("active");
+
+}
+
+
+
+if(e.key==="ArrowRight"){
+
+nextBtn.click();
+
+}
+
+
+
+if(e.key==="ArrowLeft"){
+
+prevBtn.click();
+
+}
+
+
+
+});
+
+
+
+</script>
+        <script>
+const hamburger=document.getElementById("hamburger");
+const menu=document.getElementById("menu");
+
+hamburger.addEventListener("click",()=>{
+
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
+
+});
+
+document.querySelectorAll(".menu a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        hamburger.classList.remove("active");
+        menu.classList.remove("active");
+
+    });
+
+});
+</script>
+
+
+
+</body>
+
+</html>
