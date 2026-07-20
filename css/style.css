@@ -19,6 +19,28 @@ html {
     margin-top: 35px;
 }
 
+.back-section{
+    padding: 40px 0 60px;
+    text-align: center;
+    background: #111; /* dopasuj do tła strony */
+}
+
+.back-btn{
+    display: inline-block;
+    padding: 14px 36px;
+    border: 2px solid #c9a86a;
+    color: #c9a86a;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.back-btn:hover{
+    background: #c9a86a;
+    color: #111;
+}
+
 .visual-gallery{
     display:flex;
     justify-content:center;
