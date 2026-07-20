@@ -636,6 +636,9 @@ footer {
 .delay-1 { animation-delay: 0.2s; }
 .delay-2 { animation-delay: 0.4s; }
 .delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 0.10s; }
+.delay-6 { animation-delay: 0.12s; }
 
 @media(max-width: 800px) {
     body {
